@@ -1,5 +1,9 @@
-import { useState } from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function VehicleSearch() {
   // INTERNAL JSON DATABASE
@@ -12,22 +16,22 @@ export default function VehicleSearch() {
           years: [
             {
               year: 2018,
-              engines: ["320i", "330i", "M3"]
+              engines: ["320i", "330i", "M3"],
             },
             {
               year: 2020,
-              engines: ["320d", "330e", "M340i"]
-            }
-          ]
+              engines: ["320d", "330e", "M340i"],
+            },
+          ],
         },
         {
           name: "5 Series",
           years: [
             { year: 2017, engines: ["520d", "530i", "M5"] },
-            { year: 2019, engines: ["520i", "540i"] }
-          ]
-        }
-      ]
+            { year: 2019, engines: ["520i", "540i"] },
+          ],
+        },
+      ],
     },
     {
       make: "Audi",
@@ -36,11 +40,11 @@ export default function VehicleSearch() {
           name: "A4",
           years: [
             { year: 2016, engines: ["1.8 TFSI", "2.0 TDI"] },
-            { year: 2018, engines: ["2.0 TFSI", "S4"] }
-          ]
-        }
-      ]
-    }
+            { year: 2018, engines: ["2.0 TFSI", "S4"] },
+          ],
+        },
+      ],
+    },
   ];
 
   const [make, setMake] = useState("");
@@ -52,19 +56,29 @@ export default function VehicleSearch() {
   const selectedModel = selectedMake?.models.find((m) => m.name === model);
   const selectedYear = selectedModel?.years.find((y) => y.year == year);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-out-quart",
+      once: true,
+    });
+  }, []);
+
   return (
     <section
       className="relative w-full bg-black/60 backdrop-blur-sm text-white py-16 px-6 opacity-90"
       style={{
         backgroundImage: "url('/')",
         backgroundSize: "cover",
-        backgroundPosition: "center"
+        backgroundPosition: "center",
       }}
     >
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-        
         {/* LEFT SIDE TEXT */}
-        <div className="text-center lg:text-left space-y-6">
+        <div
+          className="text-center lg:text-left space-y-6"
+          data-aos="fade-right"
+        >
           <img
             src="/logo.png"
             alt="Logo"
@@ -80,8 +94,10 @@ export default function VehicleSearch() {
         </div>
 
         {/* RIGHT SIDE — FORM */}
-        <div className="bg-black/70 border border-[#1C1C1C] rounded-xl p-6 space-y-4 w-full max-w-md mx-auto">
-          
+        <div
+          className="bg-black/70 border border-[#1C1C1C] rounded-xl p-6 space-y-4 w-full max-w-md mx-auto"
+          data-aos="fade-left"
+        >
           <h3 className="text-xl font-semibold brand-gradient mb-4">
             Vehicle Search
           </h3>
@@ -138,17 +154,18 @@ export default function VehicleSearch() {
               bg-[#D70C09] hover:bg-[#a10b08] text-white font-semibold 
               w-full py-3 rounded-lg transition shadow-md mt-4
             "
+            data-aos="fade-up"
+            data-aos-delay="150"
           >
             → View tuning options
           </button>
-
         </div>
       </div>
 
       {/* BRAND GRADIENT */}
       <style jsx global>{`
         .brand-gradient {
-          background: linear-gradient(90deg, #D70C09, #ffffff, #868386);
+          background: linear-gradient(90deg, #d70c09, #ffffff, #868386);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }

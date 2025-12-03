@@ -1,17 +1,26 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import {
   FaFacebookF,
   FaInstagram,
   FaYoutube,
   FaWhatsapp,
 } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function ContactSection() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-out-quart",
+      once: true,
+    });
+  }, []);
+
   return (
     <section className="relative py-20 bg-[#000000] text-white">
-
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-100"
@@ -25,13 +34,14 @@ export default function ContactSection() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10">
-
         {/* LEFT — FORM */}
-        <div className="bg-black/80 p-8 shadow-xl border border-white/10">
+        <div
+          className="bg-black/80 p-8 shadow-xl border border-white/10"
+          data-aos="fade-right"
+        >
           <h2 className="text-xl font-semibold mb-6">Send us an email:</h2>
 
           <form className="space-y-4">
-
             {/* Row 1 */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
@@ -89,7 +99,11 @@ export default function ContactSection() {
           </form>
 
           {/* MAP */}
-          <div className="mt-6 h-60 w-full bg-black/40 border border-white/10">
+          <div
+            className="mt-6 h-60 w-full bg-black/40 border border-white/10"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
             <iframe
               title="map"
               width="100%"
@@ -102,8 +116,11 @@ export default function ContactSection() {
         </div>
 
         {/* RIGHT — CONTACT DETAILS */}
-        <div className="text-white">
-
+        <div
+          className="text-white"
+          data-aos="fade-left"
+          data-aos-delay="100"
+        >
           <h2 className="text-xl font-semibold mb-4">Contact details:</h2>
 
           <p className="text-[#C0C0C0]">
@@ -117,17 +134,28 @@ export default function ContactSection() {
           </p>
 
           <p className="text-[#C0C0C0] mt-2">
-            <a href="mailto:enquiries@dervtech.com" className="hover:text-[#D70C09]">
+            <a
+              href="mailto:enquiries@dervtech.com"
+              className="hover:text-[#D70C09]"
+            >
               enquiries@dervtech.com
             </a>
           </p>
 
           {/* Social Icons */}
           <div className="flex items-center gap-4 mt-6 text-xl">
-            <a href="#" className="hover:text-[#D70C09]"><FaFacebookF /></a>
-            <a href="#" className="hover:text-[#D70C09]"><FaInstagram /></a>
-            <a href="#" className="hover:text-[#D70C09]"><FaYoutube /></a>
-            <a href="#" className="hover:text-[#D70C09]"><FaWhatsapp /></a>
+            <a href="#" className="hover:text-[#D70C09]">
+              <FaFacebookF />
+            </a>
+            <a href="#" className="hover:text-[#D70C09]">
+              <FaInstagram />
+            </a>
+            <a href="#" className="hover:text-[#D70C09]">
+              <FaYoutube />
+            </a>
+            <a href="#" className="hover:text-[#D70C09]">
+              <FaWhatsapp />
+            </a>
           </div>
 
           {/* Business Hours */}
@@ -140,7 +168,11 @@ export default function ContactSection() {
           </ul>
 
           {/* Facebook Box */}
-          <div className="mt-10 border border-white/10 p-3 bg-black/40">
+          <div
+            className="mt-10 border border-white/10 p-3 bg-black/40"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <p className="text-sm mb-1 text-[#C0C0C0]">DervTech Tuning</p>
             <iframe
               title="facebook"

@@ -1,9 +1,20 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function ReviewsSection() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-out-quart",
+      once: true,
+    });
+  }, []);
+
   return (
     <section className="relative py-24 bg-black">
-
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-100"
@@ -17,9 +28,11 @@ export default function ReviewsSection() {
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6">
-
         {/* Heading */}
-        <div className="text-center mb-16">
+        <div
+          className="text-center mb-16"
+          data-aos="fade-up"
+        >
           <h3 className="text-white text-2xl tracking-[4px] uppercase font-bold">
             Customer Feedback
           </h3>
@@ -38,36 +51,48 @@ export default function ReviewsSection() {
             text={`I recently had my Seat Leon remapped — very impressed with the smooth 
 acceleration and improved response. Quality service.`}
             name="Toby Fletcher"
+            dataAos="fade-up"
+            delay={0}
           />
 
           <ReviewCard
             text={`Did my Scirocco — massive difference. Friendly, clear explanations. 
 Definitely recommend.`}
             name="Jay Sharif"
+            dataAos="fade-down"
+            delay={100}
           />
 
           <ReviewCard
             text={`Audi 2.0 TDI remap — great performance boost. Professional and helpful 
 throughout the process.`}
             name="Ben Shackleton"
+            dataAos="fade-up"
+            delay={200}
           />
 
           <ReviewCard
             text={`Enquired yesterday, came out next day. Great service, fair pricing, very 
 friendly. Highly recommend!`}
             name="Mike Fletcher"
+            dataAos="fade-down"
+            delay={300}
           />
 
           <ReviewCard
             text={`BMW 740D issue sorted same day. Fast, reliable, professional. Highly 
 recommend Fehu!`}
             name="Stuart Pardy"
+            dataAos="fade-up"
+            delay={400}
           />
 
           <ReviewCard
             text={`Stage 1 install — professional, friendly, and extremely helpful. Would 
 use again 100%.`}
             name="Gary O’Neill"
+            dataAos="fade-down"
+            delay={500}
           />
         </div>
       </div>
@@ -76,9 +101,11 @@ use again 100%.`}
 }
 
 /* Updated Review Card Component */
-function ReviewCard({ text, name }) {
+function ReviewCard({ text, name, dataAos, delay }) {
   return (
     <div
+      data-aos={dataAos}
+      data-aos-delay={delay}
       className="
         bg-black/70 
         text-[#C0C0C0]
