@@ -48,49 +48,45 @@ export default function ReviewsSection() {
         {/* Reviews Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <ReviewCard
-            text={`I recently had my Seat Leon remapped — very impressed with the smooth 
-acceleration and improved response. Quality service.`}
-            name="Toby Fletcher"
+            text={`Mark remapped my 140TDi (also fitted a RamAir induction kit at the same time) taking it to slightly north of 190bhp, what an amazing difference! Also my fuel economy has risen considerably which was a shock to averaging 57.6mpg around town and 63mpg on long motorway runs. Communication was great with Mark, I left the car with him for the morning and had in back within an hour! Can't praise him enough! Fantastic service and all round lovely guy/company to deal with !.`}
+            name="Lee Patrick"
             dataAos="fade-up"
             delay={0}
           />
 
           <ReviewCard
-            text={`Did my Scirocco — massive difference. Friendly, clear explanations. 
-Definitely recommend.`}
-            name="Jay Sharif"
+            text={`Fantastic work by Mark highly recommend him thank you. Had loss of power kept going into limp mode Vauxhall could not find fault. I was recommended by a friend to contact mark. Very helpful 1 hour with mark and have more power and more economical. Thank you.`}
+            name="Tony Roberts"
             dataAos="fade-down"
             delay={100}
           />
 
           <ReviewCard
-            text={`Audi 2.0 TDI remap — great performance boost. Professional and helpful 
-throughout the process.`}
-            name="Ben Shackleton"
+            text={`Excellent service , 2nd remap I've had off mark ,I run wrecsam dubz club
+And he is the only person I recommend for remaps to my club members , thanks again mark.`}
+            name="Scott Williams"
             dataAos="fade-up"
             delay={200}
           />
 
           <ReviewCard
-            text={`Enquired yesterday, came out next day. Great service, fair pricing, very 
-friendly. Highly recommend!`}
-            name="Mike Fletcher"
+            text={`Mark tuned my vw caddy van for me after having all sorts of problems. Amazing service, really nice guy and the van had been reliable since.
+Thanks Broadway remapping`}
+            name="James Burns"
             dataAos="fade-down"
             delay={300}
           />
 
           <ReviewCard
-            text={`BMW 740D issue sorted same day. Fast, reliable, professional. Highly 
-recommend Fehu!`}
-            name="Stuart Pardy"
+            text={`Recently had my car remapped. Very pleased with the final results. My car certainly has more power now. Mark & his wife are really nice people & very knowledgeable. Communication could be a bit prompter but I know they did have a problem with their phones. Saying that, I would use their services again & I would recommend them. Thank you`}
+            name="Emma Raistrick"
             dataAos="fade-up"
             delay={400}
           />
 
           <ReviewCard
-            text={`Stage 1 install — professional, friendly, and extremely helpful. Would 
-use again 100%.`}
-            name="Gary O’Neill"
+            text={`2010 Volvo V50 1.6d ecoboost remapped. Finally the car now running well with no engine management lights on. Much better service than the Volvo dealership..`}
+            name="jennie burns"
             dataAos="fade-down"
             delay={500}
           />

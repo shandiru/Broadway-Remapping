@@ -8,16 +8,16 @@ import "aos/dist/aos.css";
 
 export default function Gallery() {
   const items = [
-    { id: "1", img: "/hero.webp", height: 720 },
-    { id: "2", img: "/h1.jpg", height: 680 },
-    { id: "3", img: "/h2.jpg", height: 700 },
-    { id: "4", img: "/h3.jpg", height: 660 },
-    { id: "5", img: "/h4.jpg", height: 740 },
-    { id: "6", img: "/h5.jpg", height: 710 },
-    { id: "7", img: "/h6.jpg", height: 650 },
-    { id: "8", img: "/about.jpg", height: 720 },
-    { id: "9", img: "/hero.webp", height: 700 },
-    { id: "10", img: "/h3.jpg", height: 730 },
+    { id: "1", img: "/im.jpg", height: 720 },
+    { id: "2", img: "/im1.jpg", height: 680 },
+    { id: "3", img: "/im2.jpg", height: 700 },
+    { id: "4", img: "/im3.jpg", height: 660 },
+    { id: "5", img: "/im4.jpg", height: 740 },
+    { id: "6", img: "/im5.jpg", height: 710 },
+    { id: "7", img: "/im6.jpg", height: 650 },
+    { id: "8", img: "/im7.jpg", height: 720 },
+    { id: "9", img: "/im8.jpg", height: 700 },
+    { id: "10", img: "/im9.jpg", height: 730 },
   ];
 
   const [activeIndex, setActiveIndex] = useState(null);
