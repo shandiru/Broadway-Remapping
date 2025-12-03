@@ -92,7 +92,7 @@ export default function ContactSection() {
               ></textarea>
             </div>
 
-            {/* Button (RED HIGHLIGHT) */}
+            {/* Button */}
             <button className="px-6 py-2 border border-[#D70C09] text-[#D70C09] text-sm hover:bg-[#D70C09] hover:text-white transition">
               Send Message
             </button>
@@ -110,26 +110,24 @@ export default function ContactSection() {
               height="100%"
               style={{ border: 0 }}
               loading="lazy"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-2.931%2C53.27%2C-2.89%2C53.30&layer=mapnik&marker=53.28755,-2.91178"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2385.8132316661526!2d-3.1427187234624776!3d53.224073879958504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487ad5c97af0ab8b%3A0xbadd60618eaed8e6!2sQue%20Sera%2C%20Pentre%20Hill%2C%20Flint%20Mountain%2C%20Flint!5e0!3m2!1sen!2suk!4v1733268000000"
             ></iframe>
           </div>
         </div>
 
         {/* RIGHT — CONTACT DETAILS */}
-        <div
-          className="text-white"
-          data-aos="fade-left"
-          data-aos-delay="100"
-        >
+        <div className="text-white" data-aos="fade-left" data-aos-delay="100">
           <h2 className="text-xl font-semibold mb-4">Contact details:</h2>
 
           <p className="text-[#C0C0C0]">
-            2C Rossbank Road, Ellesmere Port, CH653AN, United Kingdom
+            Que Sera, Pentre Hill,  
+            <br />
+            Flint Mountain, Flint, United Kingdom
           </p>
 
           <p className="text-[#C0C0C0] mt-4">
-            <a href="tel:01617060586" className="hover:text-[#D70C09]">
-              01617060586
+            <a href="tel:07392791919" className="hover:text-[#D70C09]">
+              07392 791919
             </a>
           </p>
 
@@ -144,7 +142,11 @@ export default function ContactSection() {
 
           {/* Social Icons */}
           <div className="flex items-center gap-4 mt-6 text-xl">
-            <a href="#" className="hover:text-[#D70C09]">
+            <a
+              href="https://web.facebook.com/profile.php?id=100037206957303"
+              target="_blank"
+              className="hover:text-[#D70C09]"
+            >
               <FaFacebookF />
             </a>
             <a href="#" className="hover:text-[#D70C09]">
@@ -162,25 +164,29 @@ export default function ContactSection() {
           <h3 className="text-lg font-semibold mt-10">Business Hours</h3>
 
           <ul className="text-[#C0C0C0] mt-2 space-y-1 text-sm">
-            <li>Mon - Fri: 9:00 am – 5:00 pm</li>
-            <li>Saturday: 9:00 am – 1:00 pm</li>
-            <li>Sunday: Closed</li>
+            <li>Monday: 9:30 AM – 5:30 PM</li>
+            <li>Tuesday: 9:30 AM – 5:30 PM</li>
+            <li>Wednesday: 9:30 AM – 5:30 PM</li>
+            <li>Thursday: 9:30 AM – 5:30 PM</li>
+            <li>Friday: 9:30 AM – 5:30 PM</li>
+            <li>Saturday: 9 AM – 5 PM</li>
+            <li>Sunday: 9 AM – 2 PM</li>
           </ul>
 
-          {/* Facebook Box */}
+          {/* Facebook Embed */}
           <div
             className="mt-10 border border-white/10 p-3 bg-black/40"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <p className="text-sm mb-1 text-[#C0C0C0]">DervTech Tuning</p>
+            <p className="text-sm mb-1 text-[#C0C0C0]">Follow us on Facebook</p>
             <iframe
               title="facebook"
               style={{ border: "none", overflow: "hidden" }}
               scrolling="no"
               frameBorder="0"
               allow="encrypted-media"
-              src="https://www.facebook.com/plugins/page.php?href=https://facebook.com/dervtech&tabs&width=340&height=130&small_header=false&adapt_container_width=true"
+              src="https://www.facebook.com/plugins/page.php?href=https://web.facebook.com/profile.php?id=100037206957303&tabs&width=340&height=130&small_header=false&adapt_container_width=true"
               width="340"
               height="130"
             ></iframe>
