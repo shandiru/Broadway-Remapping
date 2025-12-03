@@ -19,7 +19,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
-      <GDPRBanner />
+      {/* <GDPRBanner /> */}
     </Router>
   );
 }
