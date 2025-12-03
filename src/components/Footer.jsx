@@ -14,7 +14,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h2 className="text-2xl font-bold brand-gradient">
-              AF-MOK <span className="text-[#C0C0C0]">PERFORMANCE</span>
+              BROADWAY  <span className="text-[#C0C0C0]"> REMAPPING</span>
             </h2>
 
             <p className="text-[#C0C0C0] mb-4 mt-3 text-sm leading-relaxed">
@@ -112,7 +112,7 @@ export default function Footer() {
 
             <ul className="space-y-2 text-[#C0C0C0] text-sm">
 
-              <li>AF-MOK Performance</li>
+              <li>BROADWAY REMAPPING</li>
 
               <li>
                 <a
@@ -143,7 +143,7 @@ export default function Footer() {
                   href="mailto:afmok.performance@outlook.com"
                   className="hover:text-[#D70C09] transition break-all"
                 >
-                  afmok.performance@outlook.com
+                  enquiries@broadwayremapping.co.uk
                 </a>
               </li>
 
@@ -153,7 +153,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-[#1C1C1C] mt-10 pt-6 text-center text-[#868386] text-sm">
-          <p>&copy; 2025 AF-MOK Performance. All rights reserved.</p>
+          <p>&copy; 2025  Broadway Remapping . All rights reserved.</p>
         </div>
 
         {/* Powered By */}

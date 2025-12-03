@@ -136,7 +136,7 @@ export default function ContactSection() {
               href="mailto:enquiries@dervtech.com"
               className="hover:text-[#D70C09]"
             >
-              enquiries@dervtech.com
+              enquiries@broadwayremapping.co.uk
             </a>
           </p>
 
